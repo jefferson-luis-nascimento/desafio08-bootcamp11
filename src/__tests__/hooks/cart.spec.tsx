@@ -174,11 +174,8 @@ describe('Cart Context', () => {
 
     await act(async () => {
       fireEvent.press(getByTestId('add-to-cart'));
-      console.log('add-to-cart');
       fireEvent.press(getByTestId('increment'));
-      console.log('increment');
       fireEvent.press(getByTestId('decrement'));
-      console.log('decrement');
     });
 
     expect(mockedAsyncStorage.setItem).toHaveBeenCalledTimes(3);
